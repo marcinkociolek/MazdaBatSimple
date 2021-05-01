@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing/set1sample2raw</string>
+     <string>D:/AdditiveManufacturing/set1sample2raw/ROI12</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFolder">
@@ -229,7 +229,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>AM_Sample2</string>
+     <string>AM_R121S2</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelImageFilePattern">
@@ -309,12 +309,12 @@
      <rect>
       <x>10</x>
       <y>210</y>
-      <width>113</width>
+      <width>141</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>AM_</string>
+     <string>AM_R121S2</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFileName">
@@ -327,7 +327,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>ROISample2.tif</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelROIFileName">
@@ -353,7 +353,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>MaZdaOptAllFeatN8.txt</string>
+     <string>MaZdaOptAllFeatD8.txt</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelROIFileName_2">
@@ -380,6 +380,9 @@
     </property>
     <property name="text">
      <string>Roi Name Same As Image</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
