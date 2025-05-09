@@ -171,7 +171,12 @@ bool MainWindow::OpenImageFolder()
 //------------------------------------------------------------------------------------------------------------------------------
 bool MainWindow::OpenROIFolder()
 {
+    ROIFileNamesVector.clear();
     path ROIFolder = path(ui->lineEditROIFolder->text().toStdWString());
+
+
+
+    ui->textEditROIFiles->clear();
     if (!exists(ROIFolder))
     {
         ui->textEditOut->append("ROI folder : " + QString::fromStdWString(ROIFolder.wstring())
@@ -184,13 +189,22 @@ bool MainWindow::OpenROIFolder()
                                 + " This is not a directory path ");
         return false;
     }
-
-    path ROIFile = ROIFolder.append(ui->lineEditROIFileName->text().toStdWString());
-    if (!exists(ROIFile) && !ui->checkBoxRoiNameSameAsImage->checkState())
+    if(!ui->checkBoxRoiNameSameAsImage->checkState())
     {
-        ui->textEditOut->append("ROI file : " + QString::fromStdWString(ROIFile.wstring())
-                                + " not exists ");
-        return false;
+//        path ROIFile = ROIFolder.append(ui->lineEditROIFileName->text().toStdWString());
+//        if (!exists(ROIFile) )
+//        {
+//            ui->textEditOut->append("ROI file : " + QString::fromStdWString(ROIFile.wstring())
+//                                    + " not exists ");
+//            return false;
+//        }
+
+        ReadFolder(ROIFolder, &ROIFileNamesVector, ui->lineEditROIFilePattern->text());
+        ui->textEditROIFiles->append(StringVectorToQString(ROIFileNamesVector));
+    }
+    else
+    {
+
     }
     return true;
     //ReadFolder(ROIFolder, &ROIFileNamesVector, ui->lineEditROIFilePattern->text().toStdString() );
@@ -288,6 +302,14 @@ void MainWindow::CreateBat()
     BatFile.append((ui->lineEditBatFileName->text() + "Feat.bat").toStdWString());
 
     size_t imagesCount = ImageFileNamesVector.size();
+    size_t roisCount = ROIFileNamesVector.size();
+    if(!ui->checkBoxRoiNameSameAsImage->checkState() && imagesCount != roisCount)
+    {
+        ui->textEditOut->append(" #rois " + QString::number(roisCount) +
+                                " != #images : " + QString::number(imagesCount));
+        return;
+    }
+
 
     string BatFileContent = "cls\n";
 
@@ -304,6 +326,11 @@ void MainWindow::CreateBat()
     {
         ROIFile = path(ui->lineEditROIFolder->text().toStdWString());
         ROIFile.append(ImFile.stem().string() + ".roi");
+    }
+    else
+    {
+        ROIFile = path(ui->lineEditROIFolder->text().toStdWString());
+        ROIFile.append(ROIFileNamesVector[0]);
     }
 
 
@@ -322,6 +349,11 @@ void MainWindow::CreateBat()
         {
             ROIFile = path(ui->lineEditROIFolder->text().toStdWString());
             ROIFile.append(ImFile.stem().string() + ".roi");
+        }
+        else
+        {
+            ROIFile = path(ui->lineEditROIFolder->text().toStdWString());
+            ROIFile.append(ROIFileNamesVector[i]);
         }
 
         BatFileContent += MZGeneratorPath.string()

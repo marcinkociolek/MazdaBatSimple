@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>I:\MSMRIBrain\MaZdaFeaturesPhantoms</string>
+     <string>I:\MSMRIBrain\MaZdaFeaturesBrains</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenQMaZdaFolder">
@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>I:\MSMRIBrain\dicom_phantoms\5_20250402_t2_tse_tra_3</string>
+     <string>I:\MSMRIBrain\dicom_brains\35_20250404_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFolder">
@@ -115,7 +115,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>I:\MSMRIBrain\ROIPhantoms\5_20250402_t2_tse_tra_3</string>
+     <string>I:\MSMRIBrain\tiff_brain_segmentation_2d\35_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenMzFeaturesOutFolder">
@@ -154,7 +154,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>I:\MSMRIBrain\MaZdaFeaturesPhantoms</string>
+     <string>I:\MSMRIBrain\MaZdaFeaturesBrains</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenBatFolder">
@@ -174,7 +174,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>260</y>
+      <y>320</y>
       <width>113</width>
       <height>21</height>
      </rect>
@@ -200,7 +200,7 @@
     <property name="geometry">
      <rect>
       <x>380</x>
-      <y>500</y>
+      <y>560</y>
       <width>411</width>
       <height>70</height>
      </rect>
@@ -229,14 +229,14 @@
      </rect>
     </property>
     <property name="text">
-     <string>PH5D3</string>
+     <string>35_20250404_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelImageFilePattern">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
+      <y>300</y>
       <width>91</width>
       <height>16</height>
      </rect>
@@ -262,7 +262,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>290</y>
+      <y>350</y>
       <width>251</width>
       <height>191</height>
      </rect>
@@ -298,7 +298,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>500</y>
+      <y>560</y>
       <width>351</width>
       <height>70</height>
      </rect>
@@ -314,7 +314,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PH5D3</string>
+     <string>35_20250404_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFileName">
@@ -353,7 +353,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>AnOptD3.txt</string>
+     <string>AnOptS8.txt</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelROIFileName_2">
@@ -383,6 +383,42 @@
     </property>
     <property name="checked">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEditROIFiles">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>350</y>
+      <width>251</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditROIFilePattern">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>320</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>.+.tif</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelROIFilePattern">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>300</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ROI File pattern</string>
     </property>
    </widget>
   </widget>
