@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing</string>
+     <string>I:\MSMRIBrain\MaZdaFeaturesPhantoms</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenQMaZdaFolder">
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing</string>
+     <string>I:\MSMRIBrain\MaZdaOptions</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenOptionsFolder">
@@ -76,7 +76,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/StandaloneSoft/qmazda1902_win64a</string>
+     <string>I:\qMazda\qmazda2501_win64</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonUpenImageFolder">
@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing/set1sample2raw/ROI12</string>
+     <string>I:\MSMRIBrain\dicom_phantoms\5_20250402_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFolder">
@@ -115,7 +115,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing</string>
+     <string>I:\MSMRIBrain\ROIPhantoms\5_20250402_t2_tse_tra_3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenMzFeaturesOutFolder">
@@ -154,7 +154,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>D:/AdditiveManufacturing</string>
+     <string>I:\MSMRIBrain\MaZdaFeaturesPhantoms</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonOpenBatFolder">
@@ -180,7 +180,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>.+.tif</string>
+     <string>.+</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonCreateBatFile">
@@ -229,7 +229,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>AM_R121S2</string>
+     <string>PH5D3</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelImageFilePattern">
@@ -314,7 +314,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>AM_R121S2</string>
+     <string>PH5D3</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEditROIFileName">
@@ -353,7 +353,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>MaZdaOptAllFeatD8.txt</string>
+     <string>AnOptD3.txt</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelROIFileName_2">
